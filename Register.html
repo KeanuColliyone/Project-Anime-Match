@@ -5,57 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Registration - AnimeMatch</title>
     <link rel="stylesheet" href="styles/register.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- FontAwesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="register-container">
-        <!-- Website name and slogan -->
-        <header class="header">
-            <h1>AnimeMatch</h1>
-            <p class="slogan">Discover Your Perfect Anime Match!</p>
-        </header>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#intro">Intro</a></li>
+            <li><a href="#signup">Sign Up</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li> <!-- Added About section link -->
+        </ul>
+    </nav>
 
-        <h2>Start Using AnimeMatch</h2>
-        <p>Join AnimeMatch to receive personalized anime recommendations. Create your account and customize your profile!</p>
-
-        <form class="register-form" id="registerForm">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter your email" required />
-
-            <label for="username">Username</label>
-            <input type="text" id="username" placeholder="Enter your username (2-16 characters)" required />
-
-            <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Enter your password" required />
-
-            <label for="birthday">Birthday</label>
-            <div class="birthday-select">
-                <select id="birth-month"></select>
-                <select id="birth-day"></select>
-                <select id="birth-year"></select>
-            </div>
-
-            <p>Your birthday won't be shown publicly by default.</p>
-
-            <div class="traits-section">
-                <h3>Select a Positive Trait:</h3>
-                <select id="positive-trait"></select>
-            </div>
-
-            <div class="traits-section">
-                <h3>Select a Neutral Trait:</h3>
-                <select id="neutral-trait"></select>
-            </div>
-
-            <div class="traits-section">
-                <h3>Select a Negative Trait:</h3>
-                <select id="negative-trait"></select>
-            </div>
-
-            <button type="submit" class="register-btn">Register</button>
-        </form>
+    <!-- Sidebar with Social Media Icons and GitHub Repo Button -->
+    <div class="sidebar">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/your-repo-link" target="_blank"><i class="fab fa-github"></i></a> <!-- GitHub button -->
     </div>
 
+    <!-- Intro Section -->
+    <section id="intro" class="intro-section">
+        <div class="intro-content">
+            <h1>AnimeMatch</h1>
+            <p class="slogan">Discover Your Perfect Anime Match!</p>
+        </div>
+        <a href="https://deployed-project-url.com" target="_blank" class="app-button">Go to App</a>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="features-container">
+            <h2>Key Features of AnimeMatch</h2>
+            <div class="feature">
+                <img src="path/to/feature1-image.jpg" alt="Anime Recommendations">
+                <h3>Personalized Anime Recommendations</h3>
+                <p>Get recommendations based on your unique personality traits, helping you discover anime that matches your preferences and mood.</p>
+            </div>
+            <div class="feature">
+                <img src="path/to/feature2-image.jpg" alt="User Profile">
+                <h3>Customizable User Profiles</h3>
+                <p>Create and update your profile with personality traits and preferences, allowing the system to refine your anime recommendations.</p>
+            </div>
+            <div class="feature">
+                <img src="path/to/feature3-image.jpg" alt="Feedback System">
+                <h3>Feedback-Based Refinement</h3>
+                <p>Submit feedback on recommended anime to improve future suggestions, ensuring more accurate and personalized recommendations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section with Video -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <h2>About AnimeMatch</h2>
+            <p>
+                The inspiration for AnimeMatch came from my own personal journey as an anime enthusiast.
+                I often found it challenging to discover new anime that truly matched my tastes and preferences.
+                This project was born out of the desire to help others, like myself, find their perfect anime match.
+                By integrating personality traits and detailed feedback, AnimeMatch aims to personalize recommendations in a way that resonates deeply with each individual.
+                Whether you're new to anime or a seasoned viewer, AnimeMatch will help you discover titles that suit your mood and preferences perfectly.
+            </p>
+            <!-- Embedded YouTube video -->
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/mf-cu1vyMyw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sign Up Section -->
+    <section id="signup" class="signup-section">
+        <div class="register-container">
+            <h2>Start Using AnimeMatch</h2>
+            <p>Join AnimeMatch to receive personalized anime recommendations. Create your account and customize your profile!</p>
+
+            <form class="register-form" id="registerForm">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required />
+
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username (2-16 characters)" required />
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required />
+
+                <label for="birthday">Birthday</label>
+                <div class="birthday-select">
+                    <select id="birth-month"></select>
+                    <select id="birth-day"></select>
+                    <select id="birth-year"></select>
+                </div>
+
+                <p>Your birthday won't be shown publicly by default.</p>
+
+                <div class="traits-section">
+                    <h3>Select a Positive Trait:</h3>
+                    <select id="positive-trait"></select>
+                </div>
+
+                <div class="traits-section">
+                    <h3>Select a Neutral Trait:</h3>
+                    <select id="neutral-trait"></select>
+                </div>
+
+                <div class="traits-section">
+                    <h3>Select a Negative Trait:</h3>
+                    <select id="negative-trait"></select>
+                </div>
+
+                <button type="submit" class="register-btn">Register</button>
+            </form>
+        </div>
+    </section>
+
     <!-- JavaScript file -->
-    <script src="scripts/register.js"></script>
+    <script type="module" src="scripts/register.js"></script>
 </body>
 </html>
