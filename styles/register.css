@@ -119,7 +119,7 @@ body {
 
 /* Feature Images */
 .features-section .feature img {
-    width: 500px;
+    width: 300px;
     height: auto; /* Maintain the aspect ratio */
     margin-bottom: 20px;
 }
