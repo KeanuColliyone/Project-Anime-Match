@@ -119,8 +119,9 @@ body {
 
 /* Feature Images */
 .features-section .feature img {
-    width: 500px; /* Smaller image size to match the text */
-    height: auto;
+    width: 80%; /* Image takes up 80% of the feature's container */
+    max-width: 800px; /* Cap the maximum width */
+    height: auto; /* Maintain the aspect ratio */
     margin-bottom: 20px;
 }
 
