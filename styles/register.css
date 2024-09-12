@@ -120,7 +120,7 @@ body {
 /* Feature Images */
 .features-section .feature img {
     width: 500px; /* Smaller image size to match the text */
-    height: 500px;
+    height: auto;
     margin-bottom: 20px;
 }
 
