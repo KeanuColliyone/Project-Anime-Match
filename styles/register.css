@@ -119,8 +119,7 @@ body {
 
 /* Feature Images */
 .features-section .feature img {
-    width: 80%; /* Image takes up 80% of the feature's container */
-    max-width: 800px; /* Cap the maximum width */
+    width: 500px;
     height: auto; /* Maintain the aspect ratio */
     margin-bottom: 20px;
 }
