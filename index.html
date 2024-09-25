@@ -16,7 +16,8 @@
             <li><a href="#intro">Intro</a></li>
             <li><a href="#signup">Sign Up</a></li>
             <li><a href="#features">Features</a></li>
-            <li><a href="#about">About</a></li> <!-- Added About section link -->
+            <li><a href="#about">About</a></li>
+            <li><a href="login.html">Log In</a></li> <!-- Log In link -->
         </ul>
     </nav>
 
@@ -36,9 +37,10 @@
             <h1>AnimeMatch</h1>
             <p class="slogan">Discover Your Perfect Anime Match!</p>
         </div>
-        <a href="https://deployed-project-url.com" target="_blank" class="app-button">Go to App</a>
+        <a href="#" id="goToApp" class="app-button">Go to App</a> <!-- Go to App button -->
     </section>
-<!-- Features Section -->
+
+    <!-- Features Section -->
     <!-- Features Section -->
     <section id="features" class="features-section">
         <div class="features-container"> 
@@ -78,6 +80,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- Sign Up Section -->
     <section id="signup" class="signup-section">
@@ -126,5 +129,22 @@
 
     <!-- JavaScript file -->
     <script type="module" src="scripts/register.js"></script>
+    <script>
+        // Redirect logic for "Go to App" button
+        document.getElementById('goToApp').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default action of the anchor tag
+    
+            // Check if user is logged in (using sessionStorage)
+            const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+    
+            if (isLoggedIn === 'true') {
+                // Redirect to List.html if logged in
+                window.location.href = 'List.html';
+            } else {
+                // Redirect to login.html if not logged in
+                window.location.href = 'login.html';
+            }
+        });
+    </script>    
 </body>
 </html>

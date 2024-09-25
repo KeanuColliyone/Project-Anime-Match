@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info</title>
+    <link rel="stylesheet" href="styles/register.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Black background */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .user-info-container {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 400px;
+        }
+        h1 {
+            text-align: center;
+        }
+        input[type="text"], input[type="email"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="List.html">Watchlist</a></li>
+        </ul>
+    </nav>
+
+    <div class="user-info-container">
+        <h1>Update Info</h1>
+            <form id="userInfoForm">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+        
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+        
+                <label for="birth-month">Birth Month:</label>
+                <select id="birth-month"></select>
+        
+                <label for="birth-day">Birth Day:</label>
+                <select id="birth-day"></select>
+        
+                <label for="birth-year">Birth Year:</label>
+                <select id="birth-year"></select>
+        
+                <label for="positive-trait">Positive Trait:</label>
+                <select id="positive-trait"></select>
+        
+                <label for="neutral-trait">Neutral Trait:</label>
+                <select id="neutral-trait"></select>
+        
+                <label for="negative-trait">Negative Trait:</label>
+                <select id="negative-trait"></select>
+        
+                <button type="submit">Update</button>
+            </form>        
+    </div>
+
+    <!-- Correct script path -->
+    <script type="module" src="/scripts/userInfo.js"></script>
+    <script type="module" src="/scripts/register.js" defer></script>
+</body>
+</html>

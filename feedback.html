@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Feedback Page</title>
+    <link rel="stylesheet" href="styles/register.css">
+    <style>
+        body {
+            background-color: #000000;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .feedback-container {
+            background-color: rgb(37, 43, 30);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 500px;
+        }
+        .feedback-header {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .comment-section, .rating-section {
+            margin-bottom: 15px;
+        }
+        .comment-section textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: vertical;
+        }
+        .rating-section label {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+        .rating-section input {
+            display: none;
+        }
+        .rating-section .star {
+            font-size: 24px;
+            cursor: pointer;
+            color: #ccc;
+        }
+        .rating-section input:checked ~ .star,
+        .rating-section input:hover ~ .star {
+            color: gold;
+        }
+        .rating-section input:checked ~ .star:hover {
+            color: gold;
+        }
+        .share-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .share-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body> 
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="List.html">Watchlist</a></li>
+        </ul>
+    </nav>
+
+    <div class="feedback-container">
+        <div class="feedback-header">Website Feedback Page</div>
+
+        <div class="profile-picture"></div>
+
+        <form id="feedbackForm" action="mailto:frostccolliyone@gmail.com" method="POST" enctype="text/plain">
+            <div class="rating-section">
+                <label>Rate us</label>
+                <input type="radio" id="star5" name="rating" value="5"><label for="star5" class="star">★</label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4" class="star">★</label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3" class="star">★</label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2" class="star">★</label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1" class="star">★</label>
+            </div>
+
+            <div class="comment-section">
+                <label for="comment">Comment</label>
+                <textarea id="comment" name="comment" rows="5" placeholder="Your comment here..."></textarea>
+            </div>
+
+            <button type="submit" class="share-button">Share</button>
+        </form>
+    </div>
+</body>
+</html>
