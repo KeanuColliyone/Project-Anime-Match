@@ -1,0 +1,379 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    overflow-x: hidden;
+}
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    z-index: 100;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+/* Fixed Sidebar on Right */
+.sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 53px;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 200;
+}
+
+.sidebar a {
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #333;
+    color: #ffcc00;
+}
+
+/* Features Section */
+.features-section {
+    background-image: url('https://i.ibb.co/GV10xnn/DALL-E-2024-09-12-21-10-50-A-faded-background-image-for-Anime-Match-website-using-the-same-elements.webp');
+    background-size: cover;
+    background-position: right 50px center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+/* Container for the Features Section */
+.features-container {
+    width: calc(100% - 100px); /* 50px margin on both sides */
+    max-width: 1200px;
+    background-color: rgba(38, 38, 38, 0.9); /* Semi-transparent background */
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Feature Section Heading */
+.features-section h2 {
+    font-size: 48px; /* Larger heading */
+    margin-bottom: 30px;
+    color: #ffffff; /* White text */
+    font-weight: bold;
+}
+
+/* Feature Titles */
+.features-section .feature h3 {
+    font-size: 32px; /* Larger title text */
+    color: #ffcc00; /* Yellow color for feature titles */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Feature Descriptions */
+.features-section .feature p {
+    font-size: 18px; /* Larger description text */
+    max-width: 800px;
+    color: #fff; /* White text for descriptions */
+    line-height: 1.5;
+    margin: 0 auto 30px; /* Center-align the text with some margin at the bottom */
+}
+
+/* Feature Images */
+.features-section .feature img {
+    width: 300px;
+    height: auto; /* Maintain the aspect ratio */
+    margin-bottom: 20px;
+}
+
+/* About Section */
+.about-section {
+    background-image: url('https://i.ibb.co/GV10xnn/DALL-E-2024-09-12-21-10-50-A-faded-background-image-for-Anime-Match-website-using-the-same-elements.webp');
+    background-size: cover;
+    background-position: right 50px center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+/* Container for About Section */
+.about-container {
+    width: calc(100% - 100px);
+    max-width: 1200px;
+    background-color: rgba(38, 38, 38, 0.9); /* Semi-transparent background */
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.about-section p {
+    font-size: 18px;
+    max-width: 800px;
+    color: #fff;
+    line-height: 1.5;
+    margin: 0 auto;
+}
+
+/* Video container styling */
+.video-container {
+    margin-top: 30px;
+}
+
+/* Intro Section */
+.intro-section {
+    height: 100vh;
+    background-image: url('https://i.ibb.co/GV10xnn/DALL-E-2024-09-12-21-10-50-A-faded-background-image-for-Anime-Match-website-using-the-same-elements.webp');
+    background-size: cover;
+    background-position: right 50px center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.intro-content h1 {
+    font-size: 64px;
+    font-weight: bold;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.intro-content .slogan {
+    font-size: 32px;
+    margin-top: 20px;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Center the Go to App Button at the bottom */
+.app-button {
+    position: absolute;
+    bottom: 50px;
+    background-color: #1e1d1dbe;
+    color: rgb(193, 209, 16);
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.app-button:hover {
+    background-color: #0056b3;
+}
+
+/* Sign-Up Section */
+.signup-section {
+    background-image: url('https://i.ibb.co/GV10xnn/DALL-E-2024-09-12-21-10-50-A-faded-background-image-for-Anime-Match-website-using-the-same-elements.webp');
+    background-size: cover;
+    background-position: right 50px center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container styling for the registration form */
+.register-container {
+    background-color: rgba(38, 38, 38, 0.9);
+    border-radius: 10px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Form styling and other existing styles remain unchanged */
+.register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form label {
+    text-align: left;
+    font-size: 12px;
+    margin: 5px 0;
+    color: #ccc;
+}
+
+.register-form input[type="email"],
+.register-form input[type="text"],
+.register-form input[type="password"] {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.register-form input[type="email"]:focus,
+.register-form input[type="text"]:focus,
+.register-form input[type="password"]:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.birthday-select {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.birthday-select select {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 5px;
+}
+
+.traits-section {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.traits-section h3 {
+    margin-bottom: 10px;
+}
+
+.traits-section select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 5px;
+}
+
+.register-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .features-section .feature img {
+        max-width: 100%;
+    }
+
+    .register-container {
+        padding: 20px;
+    }
+
+    .register-btn {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    .register-form input[type="email"],
+    .register-form input[type="text"],
+    .register-form input[type="password"],
+    .birthday-select select {
+        font-size: 14px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .header .slogan {
+        font-size: 14px;
+    }
+
+    .register-container h2 {
+        font-size: 20px;
+    }
+
+    .register-container p {
+        font-size: 12px;
+    }
+    /* Adding space between password and login button */
+    .register-form input[type="password"] {
+        margin-bottom: 20px; /* Adds 20px space below the password input */
+    }
+
+    .register-btn {
+        margin-top: 20px; /* Adds 20px space above the button */
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+}
